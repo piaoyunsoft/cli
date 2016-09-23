@@ -27,7 +27,7 @@ namespace Microsoft.DotNet.Tools.CrossGen
             var crossGenExeLocationParam = app.Option("--crossgenExe <FILE>", "(Optional) Location of crossgen executable.", CommandOptionType.SingleValue);
             var generatePDBParam = app.Option("--generatePDB", "(Optional) Option to generate PDB", CommandOptionType.NoValue);
             var diaSymReaderLocationParam = app.Option("--diasymreader <FILE>", "(Optional) Location of diasymreader", CommandOptionType.SingleValue);
-            var overwriteHashParam = app.Option("--overwrite-hash", "(Optional) If package hash value conflicts with existing cache, the program will exit unless this option is given.", CommandOptionType.NoValue);
+            var overwriteHashParam = app.Option("--overwrite-on-conflict", "(Optional) Used in CACHE output mode only. If a package hash value conflicts with existing cache, the program will exit unless this option is given.", CommandOptionType.NoValue);
 
             app.OnExecute( () => {
                 VerifyRequired(crossGenExeLocationParam);
